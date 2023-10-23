@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.boxes {
+  max-width: 350px;
+  max-height: 200px;
+  color: white;
+  margin: 20px;
+}
+
+.boxes img {
+  width: 350px;
+}
+
+/* .box1 :hover {
+  border: 2px solid red;
+  box-sizing: border-box;
+  width: 500px;
+  overflow: hidden;
+} */
+
+.boxes :hover {
+  border: 2px solid red;
+  box-sizing: border-box;
+  width: 500px;
+  overflow: hidden;
+}
