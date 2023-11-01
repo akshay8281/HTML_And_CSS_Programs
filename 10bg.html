@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            background-color: green;
+        }
+        div{
+            height: 400px;
+        }
+        .background-color{
+            background-color: red;
+            
+        }
+        .background-img{
+            /* background-image: url(../img/logo.png) ; */
+            background-image: url(https://picsum.photos/id/537/200/300);
+        }
+        .background-repeat{
+            background-image: url(https://picsum.photos/id/537/200/300);
+            background-repeat: no-repeat;
+            /* background-repeat: repeat-x;
+            background-repeat: repeat-y; */
+        }
+        .background-attachment{
+            background-image: url(https://picsum.photos/id/537/200/300);
+            background-attachment: fixed;
+        }
+        .background-position{
+            /* background-image: url(https://picsum.photos/id/537/200/300); */
+            background-repeat: no-repeat;
+            background-position: center;
+            background-position: right;
+            background-position: left;
+            background-position: 500PX;
+
+        }
+        .box{
+            background-image: url(https://picsum.photos/id/527/200/300);
+            width: 400px;
+            background-repeat: no-repeat;
+        }
+        .box1{
+            background-image: url(https://picsum.photos/id/557/200/300);
+            width: 400px;
+            background-repeat: no-repeat;
+        }
+        .box2{
+            background-image: url(https://picsum.photos/id/567/200/300);
+            width: 400px;
+            background-repeat: no-repeat;
+        }
+        .background-size{
+            background-image: url(https://picsum.photos/id/567/1200/400);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-size: cover;
+        }
+        .background{
+            background: url(../img/logo.png) no-repeat fixed cover;
+        }
+        .background-flag{
+            background: linear-gradient(100deg ,orange, white , green) ;
+            
+        }
+       
+
+    </style>
+</head>
+<body>
+
+
+    <h1>background-color</h1>
+    <h1>background-img</h1>
+    <h1>background-repeat</h1>
+    <h1>background-attachment</h1>
+    <h1> background-position</h1>
+    <h1>background-size</h1>
+    <h1>background</h1>
+    <h1>background-flag</h1>
+
+    <img src="../img/download.jpg" alt="">
+    
+    <p></p>
+
+    <div class="background-color">background-color</div>
+    <div class="background-img">background-img</div>
+    <div class="background-repeat">background-repeat</div>
+    <div class="background-attachment">background-attachment</div>
+    <div class="background-position">
+        <!-- <div class="box"></div>
+        <div class="box1"></div>
+        <div class="box2"></div> -->
+    </div>
+    <div class="background-size">background-size</div>
+    <div class="background">background</div>
+    <div class="background-flag">background-flag</div>
+</body>
+</html>
