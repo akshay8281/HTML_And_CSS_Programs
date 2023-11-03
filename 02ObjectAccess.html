@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        (function () {
+
+            var myJSONObject =
+            {
+                "abc":
+                {
+                    "prod_1":
+                        [
+                            { "prod_ver": "prod 1 ver 1" },
+                            { "prod_ver": "prod 1 ver 2" }
+                        ],
+
+                    "prod_2":
+                        [
+                            { "prod_ver": "prod 2 ver 1" },
+                            { "prod_ver": "prod 2 ver 2" }
+                        ],
+                    "prod_3":
+                        [
+                            { "prod_ver": "prod 3 ver 1" },
+                            { "prod_ver": "prod 3 ver 2" }
+                        ]
+                }
+            };
+
+            var productName;
+            var productVersionArray;
+            var versionIndex;
+
+            for (productName in myJSONObject.abc) {
+                productVersionArray = myJSONObject.abc[productName];
+                display(productName + " has " + productVersionArray.length + " versions listed");
+                for (versionIndex = 0; versionIndex < productVersionArray.length; ++versionIndex) {
+                    display("* " + productVersionArray[versionIndex].prod_ver);
+                }
+            }
+
+            function display(msg) {
+                var p = document.createElement('p');
+                p.innerHTML = String(msg);
+                document.body.appendChild(p);
+            }
+
+        })();
+
+    </script>
+
+</body>
+
+</html>
