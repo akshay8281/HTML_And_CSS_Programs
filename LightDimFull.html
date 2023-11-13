@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .gallery-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .gallery-item img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+
+      .gallery-item:hover {
+        transform: scale(1.05);
+      }
+
+      .lightbox {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+      }
+
+      .lightbox img {
+        max-width: 80%;
+        max-height: 80%;
+        border-radius: 8px;
+      }
+
+      .lightbox.active {
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gallery">
+      <div class="gallery-item" onclick="openLightbox('image1.jpg')">
+        <img
+          src="https://m.media-amazon.com/images/I/71jIfDWFmEL._AC_UF894,1000_QL80_.jpg"
+          alt="Image 1"
+        />
+      </div>
+      <div class="gallery-item" onclick="openLightbox('image2.jpg')">
+        <img
+          src="https://cdn.britannica.com/88/212888-050-6795342C/study-lamp-electrical-cord.jpg"
+          alt="Image 2"
+        />
+      </div>
+      <div class="gallery-item" onclick="openLightbox('image3.jpg')">
+        <img
+          src="https://media.istockphoto.com/id/1150776990/vector/%C3%B0%C3%B0%C2%B5%C3%B0%C3%B1%C3%B0%C3%B1%C3%B0%C3%B0%C3%B1%C3%B0-2.jpg?s=612x612&w=0&k=20&c=J8qy9IxZ42caK1yDwu8Y9UNhX7fEhHVC-8A_WRXzKTA="
+          alt="Image 3"
+        />
+      </div>
+      <!-- Add more gallery items as needed -->
+    </div>
+
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+      <img src="" alt="Enlarged Image" />
+    </div>
+
+    <script>
+      function openLightbox(imageSrc) {
+        document.getElementById("lightbox").classList.add("active");
+        document.querySelector(".lightbox img").src = imageSrc;
+      }
+
+      function closeLightbox() {
+        document.getElementById("lightbox").classList.remove("active");
+      }
+    </script>
+  </body>
+</html>
