@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Transition Project</title>
+
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+        overflow-x: hidden;
+      }
+
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 15px 0;
+        text-align: center;
+      }
+
+      nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav ul li {
+        display: inline;
+        margin-right: 20px;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+        font-size: 18px;
+        transition: color 0.5s;
+      }
+
+      nav a:hover {
+        color: #e44d26; /* Orange color on hover */
+      }
+
+      .section {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 1s, transform 1s;
+      }
+
+      .section.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="home" class="section">
+      <div class="content">
+        <h1>Welcome to our Website</h1>
+        <p>Discover amazing services and more.</p>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="content">
+        <h2>About Us</h2>
+        <p>Learn about our mission and values.</p>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="content">
+        <h2>Our Services</h2>
+        <p>Explore the range of services we offer.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="content">
+        <h2>Contact Us</h2>
+        <p>Get in touch with our team.</p>
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const sections = document.querySelectorAll(".section");
+        const navLinks = document.querySelectorAll("nav a");
+
+        function checkSections() {
+          sections.forEach((section) => {
+            const position = section.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+
+            if (position < windowHeight - 50) {
+              section.classList.add("active");
+            }
+          });
+        }
+
+        function setActiveLink() {
+          const fromTop = window.scrollY + 50;
+
+          navLinks.forEach((link) => {
+            const section = document.querySelector(link.getAttribute("href"));
+            if (
+              section.offsetTop <= fromTop &&
+              section.offsetTop + section.offsetHeight > fromTop
+            ) {
+              link.classList.add("active");
+            } else {
+              link.classList.remove("active");
+            }
+          });
+        }
+
+        window.addEventListener("scroll", function () {
+          checkSections();
+          setActiveLink();
+        });
+
+        window.addEventListener("resize", checkSections);
+
+        checkSections(); // Initial check on page load
+        setActiveLink(); // Set active link on page load
+      });
+    </script>
+  </body>
+</html>
