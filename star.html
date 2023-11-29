@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Star Pattern</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #000;
+      animation: glow 2s linear infinite alternate;
+    }
+
+    .star {
+      width: 0;
+      height: 0;
+      border-left: 25px solid transparent;
+      border-right: 25px solid transparent;
+      border-bottom: 50px solid #f39c12;
+      position: relative;
+      animation: rotateStar 2s linear infinite alternate;
+    }
+
+    .star:nth-child(even) {
+      transform: rotate(36deg);
+    }
+
+    @keyframes rotateStar {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes glow {
+      0%, 100% {
+        filter: brightness(100%);
+      }
+      50% {
+        filter: brightness(150%);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="star"></div>
+  <div class="star"></div>
+  <div class="star"></div>
+  <div class="star"></div>
+  <div class="star"></div>
+
+</body>
+</html>
