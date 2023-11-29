@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animated Background</title>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        background: linear-gradient(45deg, #3498db, #2ecc71, #e74c3c, #f39c12);
+        background-size: 400% 400%;
+        animation: gradientAnimation 15s infinite;
+      }
+
+      section {
+        height: 100vh;
+      }
+
+      h1 {
+        position: absolute;
+        left: 30%;
+        top: 25%;
+        font-size: 100px;
+        text-align: center;
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+
+      @keyframes gradientAnimation {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <header>
+        <h1>Akshay Pitroda</h1>
+      </header>
+    </section>
+  </body>
+</html>
