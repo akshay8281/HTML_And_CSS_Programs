@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Cool Burger Effect</title>
+    <style>
+        body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    display: flex;
+}
+
+.burger-menu {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    margin: 15px;
+}
+
+.bar {
+    width: 30px;
+    height: 4px;
+    background-color: #333;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.nav {
+    display: none;
+}
+
+.nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav li {
+    margin: 10px 0;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .burger-menu {
+        display: flex;
+    }
+
+    .nav {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #f9f9f9;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+    }
+
+    .nav ul {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .nav li {
+        margin: 10px 0;
+    }
+
+    .nav a {
+        color: #333;
+        font-weight: bold;
+    }
+
+    .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="burger-menu" id="burger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    <nav class="nav">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <p>Main Content Goes Here</p>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const burgerMenu = document.getElementById('burger-menu');
+    const nav = document.querySelector('.nav');
+
+    burgerMenu.addEventListener('click', function () {
+        nav.style.display = (nav.style.display === 'block') ? 'none' : 'block';
+    });
+});
+
+</script>
+</body>
+</html>
