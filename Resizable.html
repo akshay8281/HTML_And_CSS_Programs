@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f5f5f5;
+    }
+
+    .resizable-rotatable {
+      width: 100px;
+      height: 100px;
+      background-color: #3498db;
+      transition: transform 0.3s ease-in-out, width 0.3s ease-in-out, height 0.3s ease-in-out;
+      cursor: move;
+    }
+  </style>
+</head>
+<body>
+  <div class="resizable-rotatable" id="resizableRotatable" onmousedown="initResize(event)"></div>
+
+  <script>
+    let resizing = false;
+    let initialX;
+    let initialY;
+    let initialWidth;
+    let initialHeight;
+
+    function initResize(e) {
+      resizing = true;
+      initialX = e.clientX;
+      initialY = e.clientY;
+      initialWidth = document.getElementById('resizableRotatable').offsetWidth;
+      initialHeight = document.getElementById('resizableRotatable').offsetHeight;
+      window.addEventListener('mousemove', handleResize);
+      window.addEventListener('mouseup', stopResize);
+    }
+
+    function handleResize(e) {
+      if (resizing) {
+        const width = initialWidth + (e.clientX - initialX);
+        const height = initialHeight + (e.clientY - initialY);
+
+        document.getElementById('resizableRotatable').style.width = `${width}px`;
+        document.getElementById('resizableRotatable').style.height = `${height}px`;
+      }
+    }
+
+    function stopResize() {
+      resizing = false;
+      window.removeEventListener('mousemove', handleResize);
+      window.removeEventListener('mouseup', stopResize);
+    }
+
+    document.getElementById('resizableRotatable').addEventListener('click', rotateElement);
+
+    function rotateElement() {
+      const element = document.getElementById('resizableRotatable');
+      const currentRotation = parseInt(element.style.transform.replace('rotate(', '').replace('deg)', '')) || 0;
+      const newRotation = currentRotation + 45; // Rotate by 45 degrees
+
+      element.style.transform = `rotate(${newRotation}deg)`;
+    }
+  </script>
+</body>
+</html>
