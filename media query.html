@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            border: solid 1px;
+        }
+
+        .container {
+            width: 1150px;
+            margin: 0 auto;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* .col-25 {
+            width: 100%;
+            background-position: center center;
+            background-size: cover;
+        }
+
+        .col-33 {
+            width: 100%;
+        }
+
+        .col-50 {
+            width: 100%;
+        } */
+
+        /* @media(min-width : 576px) {
+            .container {
+                width: 560px;
+
+            }
+
+
+        } */
+
+        /* @media(min-width : 768px) {
+            .container {
+                width: 720px;
+            }
+
+            .col-25 {
+                width: 50%;
+            }
+
+            .col-33 {
+                width: 50%;
+                margin: 0 auto;
+            }
+
+            .col-50 {
+                width: 50%;
+            }
+        }
+
+        @media (min-width : 992px) {
+            .container {
+                width: 920px;
+            }
+
+            .col-25 {
+                width: 25%;
+            }
+
+            .col-33 {
+                width: 33.33%;
+            }
+
+            .col-50 {
+                width: 50%;
+            }
+        }
+
+        @media(min-width : 1200px) {
+            .container {
+                width: 1150px;
+            } */
+
+            /* .col-25{
+                width: 25%;
+            }
+            .col-33{
+                width: 33.33%;
+            }
+            .col-50 {
+            width: 50%;
+        } */
+        /* } */
+        .box-child-1{
+            height: 200px;
+        }
+        .row{
+            display: flex;
+        }
+        .col-30{
+            width: 30%;
+            border: solid 1px;
+        }
+        .box-child-2{
+            align-items: flex-end;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <ul>
+        <li>min-width</li>
+        <li>max-width</li>
+    </ul>
+    <ol>
+        <li>576px</li>
+        <li>768px</li>
+        <li>992px</li>
+        <li>1200px</li>
+    </ol>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-25">col-25</div>
+                <div class="col-25">col-25</div>
+                <div class="col-25">col-25</div>
+                <div class="col-25">col-25</div>
+            </div>
+            <div class="row">
+                <div class="col-33">col-33</div>
+                <div class="col-33">col-33</div>
+                <div class="col-33">col-33</div>
+            </div>
+            <div class="row">
+                <div class="col-50">col-50</div>
+                <div class="col-50">col-50</div>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="container">
+            <div class="main-p">
+                <div class="row">
+                    <div class="box-child-1 col-30">
+                        <h1>one</h1>
+                    </div>
+                    <div class="box-child-2 col-30 row">
+                        <h1>two</h1>
+                    </div>
+                    <!-- <div class="box-child col-30">
+                        <h1>three</h1>
+                    </div> -->
+                </div>
+            </div>
+            <div class="main-p">
+                <div class="row">
+                    <div class="box-child-1 col-30">
+                        <!-- <h1>one</h1> -->
+                    </div>
+                    <div class="box-child-2 col-30 row">
+                        <h1>two</h1>
+                    </div>
+                    <div class="box-child col-30">
+                        <h1>three</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+</body>
+
+</html>
