@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Oswald&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Oswald&family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.po-rel {
+  position: relative;
+}
+
+.po-abs {
+  position: absolute;
+}
+
+/* Section - 1 */
+
+.sec-1-text {
+  padding: 50px 5px 20px 5px;
+  text-align: center;
+}
+.sec-1-text h5 {
+  letter-spacing: 5px;
+}
+
+.sec-1-text h2 {
+  font-size: 30px;
+}
+
+.slot {
+  padding: 70px 20px 50px 30px;
+  background-color: #212529;
+  width: 26%;
+  color: #ffffff;
+}
+
+.slot h1 {
+  position: absolute;
+  font-size: 40px;
+  right: 20px;
+  top: 20px;
+}
+
+.content-text h4 {
+  font-family: "Oswald", sans-serif;
+}
+
+.content-text p {
+  margin-block: 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+}
+
+.cards {
+  margin: 0 auto;
+  flex-direction: column;
+}
+
+.row-1 {
+  align-items: end;
+  justify-content: flex-start;
+}
+
+.row-2 {
+  align-items: end;
+  justify-content: flex-end;
+}
+
+.arrow-text h4 {
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+}
+
+.arrow-text div ::before {
+  content: " __________________";
+  margin-inline: 20px;
+  font-size: 30px;
+}
+
+.arrow-text div ::after {
+  content: " __________________";
+  margin-inline: 20px;
+  font-size: 30px;
+}

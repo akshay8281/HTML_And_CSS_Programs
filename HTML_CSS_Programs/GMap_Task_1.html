@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .content {
+        background-color: rgb(96, 222, 224);
+        width: 80em;
+        height: 43em;
+        padding: 35px;
+        border: 3px solid black;
+        position: relative;
+        left: 80px;
+        top: 15px;
+        border-radius: 12px;
+      }
+      .nav-header {
+        height: 7em;
+        width: 80em;
+        background-color: rgb(205, 199, 199);
+        border-radius: 10px;
+      }
+      .Mbody {
+        background-color: rgb(192, 205, 157);
+        height: 27em;
+        width: 78em;
+        padding: 30px 20px;
+      }
+      .Address {
+        margin: 0px 80px 0px 30px;
+        box-sizing: border-box;
+      }
+      div {
+        display: inline-block;
+      }
+      h1 {
+        margin-bottom: 0.5em;
+        color: brown;
+      }
+      .Contact {
+        margin: 15px 0px 0px 100px;
+        font-size: 18px;
+      }
+      .Location {
+        margin-left: 23em;
+        font-size: 50px;
+        color: red;
+        position: relative;
+        bottom: 1.5em;
+      }
+      button {
+        color: white;
+        background-color: red;
+        border-radius: 7px;
+        padding: 7px;
+        font-size: 15px;
+        margin-left: 25px;
+      }
+      button:hover {
+        color: rgb(245, 13, 13);
+        background-color: bisque;
+        font-weight: 800;
+        font-size: 14px;
+        cursor: pointer;
+      }
+      input {
+        width: 250px;
+        padding: 5px 12px;
+        margin: 2px 15px;
+        box-sizing: border-box;
+        border-radius: 7px;
+        border: 2px solid black;
+      }
+      textarea {
+        padding: 7px 12px;
+        margin: 5px 15px;
+        box-sizing: border-box;
+        border-radius: 7px;
+        border: 2px solid black;
+      }
+      iframe {
+        position: relative;
+        left: 39em;
+        bottom: 22em;
+        border-radius: 12px;
+      }
+      .social {
+        position: relative;
+        right: 600px;
+        bottom: 300px;
+        font-size: 17px;
+        height: 30px;
+        width: 160px;
+      }
+      i {
+        margin-right: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <div class="content">
+        <h1>CONTACT US</h1>
+        <!-- Section - 1 -->
+        <div class="nav-header">
+          <div class="Address">
+            <p>
+              ADDRESS : <br />
+              Dholera, Ahmedabad, Gujarat, India - 382455
+            </p>
+          </div>
+          <div class="Contact">
+            <label for="Phone">
+              <i class="fa-sharp fa-solid fa-phone-volume"> </i>
+            </label>
+            <input type="tel" placeholder="+91 9426648281" name="Phone" />
+            <br />
+            <br />
+            <label for="Email"> <i class="fa-solid fa-envelope"></i></label>
+            <input
+              type="email"
+              name="Email"
+              placeholder="aks.pitroda.8@gmail.com"
+            />
+          </div>
+          <div class="Location">
+            <i class="fa-sharp fa-solid fa-location-dot"></i>
+          </div>
+        </div>
+
+        <!-- Section 2 -->
+        <div class="Mbody">
+          <input type="text" placeholder="Name :" />
+          <input type="text" placeholder="Company :" />
+          <br />
+          <br />
+          <input type="email" placeholder="Type your Email ID" />
+          <input type="tel" placeholder="94******81" />
+          <br /><br />
+          <textarea
+            name="Message"
+            id="Message"
+            cols="43"
+            rows="10"
+            placeholder="Message :"
+          ></textarea>
+          <br />
+          <br />
+          <button>Send</button> <br />
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7385.563412460079!2d72.18995170985188!3d22.2483597685571!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395f2451ff4100f9%3A0xaa2cd52f20110ead!2sDholera%2C%20Gujarat%20382455!5e0!3m2!1sen!2sin!4v1688035445050!5m2!1sen!2sin"
+            width="625"
+            height="400"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+      <div class="social">
+        <i style="color: blue" class="fa-brands fa-facebook"></i>
+        <i
+          style="color: rgb(6, 126, 142)"
+          class="fa-brands fa-square-twitter"
+        ></i>
+        <i style="color: rgb(95, 30, 249)" class="fa-brands fa-linkedin"></i>
+        <i class="fa-brands fa-github"></i>
+      </div>
+    </form>
+  </body>
+</html>

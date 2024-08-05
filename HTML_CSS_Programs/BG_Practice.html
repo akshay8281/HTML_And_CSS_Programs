@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice For BG</title>
+  </head>
+  <style>
+    .container {
+      background-color: aqua;
+      color: brown;
+    }
+    .contain-child {
+      background-color: blueviolet;
+      color: white;
+    }
+    .bgimg {
+      background-image: url(https://media.istockphoto.com/id/1280582431/photo/3d-abstract-wavy-spiral-background-neon-lighting.jpg?s=612x612&w=0&k=20&c=xyHs7GzA-0LsKpBFnRppzgc93djiQ6YSyaZSoiD6yhI=);
+      color: white;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-clip: border-box;
+      border: 2px solid red;
+      background-size: cover;
+    }
+    .gradiant {
+      background: linear-gradient(orange, white, green);
+    }
+    .bgfilter {
+      background-image: linear-gradient(orange, white, green url(https://www.shutterstock.com/image-photo/army-soldier-combat-uniforms-assault-260nw-632066849.jpg));
+
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 500px;
+      width: 300px;
+      background-clip: border-box;
+      border: 2px solid red;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1 class="contain-child">Background Color Tag</h1>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque sunt
+        nemo veniam similique fuga eos, blanditiis recusandae excepturi dicta ab
+        repellendus, pariatur inventore iste facilis. Quia iure unde facere ea.
+        Ea aliquam, aut quidem debitis soluta maiores excepturi ducimus libero,
+        dolore nesciunt veniam quibusdam in, adipisci nisi reprehenderit eaque
+        necessitatibus!
+      </p>
+    </div>
+    <div class="bgimg">
+      <h1>Background Image tag</h1>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil tempore
+        suscipit, alias, odio fuga ea unde ad modi eius cum facere pariatur
+        architecto quis blanditiis placeat repudiandae molestias dignissimos,
+        esse consequatur sequi praesentium numquam libero incidunt fugit!
+        Assumenda, explicabo ipsum.
+      </p>
+    </div>
+    <div class="gradiant">
+      <h1>Background Linear Gradiant tag</h1>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil tempore
+        suscipit, alias, odio fuga ea unde ad modi eius cum facere pariatur
+        architecto quis blanditiis placeat repudiandae molestias dignissimos,
+        esse consequatur sequi praesentium numquam libero incidunt fugit!
+        Assumenda, explicabo ipsum.
+      </p>
+    </div>
+    <div class="bgfilter">
+      <h1>Background Linear Gradiant Filter</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea cumque
+        sequi, ab quaerat incidunt similique cum quis eveniet quasi? Velit
+        quibusdam ut numquam, animi laborum ex assumenda suscipit accusamus
+        porro, itaque quam doloremque enim. Officiis dolore voluptatibus
+        nesciunt excepturi dolores!
+      </p>
+    </div>
+  </body>
+</html>

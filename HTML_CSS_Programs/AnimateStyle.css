@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+body {
+  background-color: black;
+}
+
+.main-box {
+  width: 500px;
+  height: 500px;
+  background-color: darkgoldenrod;
+  margin: 100px auto;
+}
+
+.box {
+  width: 150px;
+  flex-wrap: wrap;
+  height: 150px;
+  background-color: grey;
+  font-size: 60px;
+  transition-duration: 0.7s;
+  transition-timing-function: ease-in-out;
+  transform-style: flat;
+  transition-property: border-radius, transform, color, background-color;
+  text-align: center;
+  justify-content: center;
+}
+
+.box:hover {
+  border-radius: 50%;
+  background-color: purple;
+  color: blanchedalmond;
+  transform: rotate(360deg);
+}

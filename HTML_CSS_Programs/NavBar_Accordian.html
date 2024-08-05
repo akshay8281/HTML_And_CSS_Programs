@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      background-color: #333;
+      overflow: hidden;
+    }
+
+    .nav-item {
+      float: left;
+      width: 25%;
+      text-align: center;
+    }
+
+    .nav-link {
+      display: block;
+      padding: 14px 16px;
+      color: #fff;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .nav-link:hover {
+      background-color: #555;
+    }
+
+    .accordion-content {
+      display: none;
+      padding: 15px;
+      background-color: #f9f9f9;
+      border-top: 1px solid #ddd;
+    }
+
+    .nav-item:hover .accordion-content {
+      display: block;
+    }
+  </style>
+  <title>Navbar Accordion</title>
+</head>
+<body>
+
+<div class="navbar">
+  <div class="nav-item">
+    <a class="nav-link" href="#">Home</a>
+    <div class="accordion-content">
+      <p>Content for Home</p>
+    </div>
+  </div>
+  <div class="nav-item">
+    <a class="nav-link" href="#">About</a>
+    <div class="accordion-content">
+      <p>Content for About</p>
+    </div>
+  </div>
+  <div class="nav-item">
+    <a class="nav-link" href="#">Services</a>
+    <div class="accordion-content">
+      <p>Content for Services</p>
+    </div>
+  </div>
+  <div class="nav-item">
+    <a class="nav-link" href="#">Contact</a>
+    <div class="accordion-content">
+      <p>Content for Contact</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

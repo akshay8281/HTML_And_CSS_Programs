@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Carrom Board</title>
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #2c3e50; /* Background color for the body */
+      }
+
+      .carrom-board {
+        position: relative;
+        width: 400px;
+        height: 400px;
+        background-color: #f1c40f; /* Carrom board color */
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      }
+
+      .center-circle {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-color: #fff;
+        border-radius: 50%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .border {
+        position: absolute;
+        width: 380px;
+        height: 380px;
+        border: 10px solid #8e44ad; /* Border color */
+        border-radius: 5px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .pockets {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: space-between;
+      }
+
+      .pocket {
+        width: 20px;
+        height: 20px;
+        background-color: #3498db; /* Pocket color */
+        border-radius: 50%;
+      }
+
+      .top-left {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .top-right {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+
+      .bottom-left {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+
+      .bottom-right {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+
+      .striker {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background-color: #e74c3c; /* Striker color */
+        border-radius: 50%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+        z-index: 1; /* Striker appears above the carrom pieces */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="carrom-board">
+      <div class="center-circle"></div>
+      <div class="border"></div>
+      <div class="pockets">
+        <div class="pocket top-left"></div>
+        <div class="pocket top-right"></div>
+        <div class="pocket bottom-left"></div>
+        <div class="pocket bottom-right"></div>
+      </div>
+      <div class="striker"></div>
+    </div>
+  </body>
+</html>

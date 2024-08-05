@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation</title>
+
+    <style>
+      @keyframes superb {
+        from {
+          left: 0px;
+        }
+        to {
+          left: 2000px;
+        }
+        from {
+          top: 0px;
+        }
+        to {
+          top: 850px;
+        }
+      }
+
+      .wonder {
+        background-color: rgb(87, 87, 107);
+        color: white;
+        padding: 20px;
+        font-size: 30px;
+        width: 100px;
+        height: 100px;
+        position: relative;
+        animation: superb 15s infinite;
+        animation-timing-function: linear;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wonder">
+      <p>Akshay Pitroda</p>
+    </div>
+  </body>
+</html>

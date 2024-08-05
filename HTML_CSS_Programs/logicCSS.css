@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Oswald&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Oswald&family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.po-rel {
+  position: relative;
+}
+
+.po-abs {
+  position: absolute;
+}
+
+/* Section - 1 */
+
+.sec-1 {
+  background-color: black;
+}
+
+.sec-1-text {
+  padding: 50px 5px 20px 5px;
+  text-align: center;
+}
+.sec-1-text h5 {
+  letter-spacing: 5px;
+}
+
+.sec-1-text h2 {
+  font-size: 30px;
+}
+
+.boxes {
+  flex-direction: column;
+}
+
+.box-1,
+.box-2 {
+  align-items: flex-end;
+}
+
+.box-2 {
+  justify-content: flex-end;
+}
+
+.slice-1 {
+  font-size: 290px;
+  position: absolute;
+  bottom: -30px;
+  left: 300px;
+  color: #ffffff;
+}
+
+.slice-2 {
+  font-size: 290px;
+  position: absolute;
+  right: 300px;
+  bottom: -32px;
+  color: #ffffff;
+}
+
+.sub-box {
+  background-color: rgb(62, 13, 51);
+  width: 26%;
+  padding: 20px 20px 60px 20px;
+  flex-direction: column;
+  color: white;
+}
+
+.sub-box h1 {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 50px;
+}
+
+.sub-box h4 {
+  padding-top: 40px;
+  font-family: "Oswald", sans-serif;
+}
+
+.sub-box p {
+  margin-block: 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+}
+
+.arrow-text {
+  margin-inline: 20px;
+}
+
+.box-1 i {
+  position: absolute;
+  color: rgb(45, 178, 171);
+  font-size: 50px;
+  right: 400px;
+  top: 185px;
+}
+
+.box-2 i {
+  position: absolute;
+  color: rgb(45, 178, 171);
+  font-size: 50px;
+  left: 400px;
+  top: 185px;
+  transform: rotate(180deg);
+}
+
+.arrow-text h4 {
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+  color: #ffffff;
+}
+
+.arrow-text div ::before {
+  content: " __________________";
+  margin-inline: 20px;
+  font-size: 30px;
+  color: #ffffff;
+}
+
+.arrow-text div ::after {
+  content: " __________________";
+  margin-inline: 20px;
+  font-size: 30px;
+  color: #ffffff;
+}
+

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- username = ________ -->
+    <form action="php.backend" method="post">
+      <table>
+        <tr>
+          <td><label for="Username">Username</label></td>
+          <td><input id="Username" type="text" /></td>
+        </tr>
+        <tr>
+          <td><label for="password">password</label></td>
+          <td><input id="password" type="password" /></td>
+        </tr>
+        <tr>
+          <td><label for="Email">Email</label></td>
+          <td><input type="email" name="" id="Email" /></td>
+        </tr>
+        <tr>
+          <td><label for="Phone">Phone-no</label></td>
+          <td><input type="tel" name="" id="Phone" /></td>
+        </tr>
+        <tr>
+          <td><label for="Gender">Gender</label></td>
+          <td>
+            male <input type="radio" checked name="Gender" id="" /> female
+            <input type="radio" name="Gender" id="" /> other
+            <input type="radio" disabled name="Gender" id="" />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="Date">Date</label></td>
+          <td><input type="date" name="" id="Date" /></td>
+        </tr>
+        <tr>
+          <td><label for="Date-time">Date-time</label></td>
+          <td><input type="datetime-local" name="" id="Date-time" /></td>
+        </tr>
+        <tr>
+          <td><label for="hobbeis">hobbeis</label></td>
+          <td>
+            cricket
+            <input type="checkbox" checked disabled name="cricket" id="" />
+            swiming <input type="checkbox" name="" id="" /> travel
+            <input type="checkbox" name="" id="" /> Bike
+            <input type="checkbox" name="" id="" /> outing
+            <input type="checkbox" name="" id="" /> Movies
+            <input type="checkbox" name="" id="" />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="Entre-hobbeis">Enter your hobbeis</label></td>
+          <td>
+            <textarea name="" id="" cols="100" rows="5"></textarea>
+            <!-- <input type="text"> -->
+          </td>
+        </tr>
+        <tr>
+          <td><label for="City">City</label></td>
+          <td>
+            <select name="" id="">
+              +
+              <!-- Ahmedabad
+                        surat
+                        baroda
+                        mumbai
+                        pune -->
+              <option value="none">select your city</option>
+              <option value="Ahmedabad">Ahmedabad</option>
+              <option value="surat">surat</option>
+              <option value="baroda">baroda</option>
+              <option value="mumbai">mumbai</option>
+              <option value="pune">pune</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="Eduction">Eduction</label></td>
+          <td>
+            <select name="" id="" multiple>
+              <option value="none">None</option>
+              <option value="">10th</option>
+              <option value="">12th</option>
+              <option value="">Bca</option>
+              <option value="">BSc</option>
+              <option value="">E.R</option>
+              <option value="">Dr</option>
+              <option value="">PHD</option>
+            </select>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
